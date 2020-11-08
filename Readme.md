@@ -1,19 +1,23 @@
-Seminario MongoDB (NoSQL)
+# Seminario MongoDB (NoSQL)
 
-Actividad
+## Actividad
 
-1. Instalar MongoDB en ambiente local.
+**1. Instalar MongoDB en ambiente local.**
 
-2. Conectarse a MongoDB vía CLI.
+**2. Conectarse a MongoDB vía CLI.**
+
     $ mongo
 
-3. Crear una nueva base de datos llamada futbolfifa.
+**3. Crear una nueva base de datos llamada futbolfifa.**
+
     use futbolfifa
 
-4. Crear una nueva collection llamada players.
+**4. Crear una nueva collection llamada players.**
+
     db.createCollection("players")
 
-5. Insertar 5 documentos en la collection players con datos básicos (nombre, apellido, posición, fecha de nacimiento, etc).
+**5. Insertar 5 documentos en la collection players con datos básicos (nombre, apellido, posición, fecha de nacimiento, etc).**
+
     db.players.insert([
         {
             name:"Lionel", 
@@ -54,10 +58,11 @@ Actividad
     ])
 
 
-6. Listar todos los documentos de la collection players.
+**6. Listar todos los documentos de la collection players.**
+
     $db.players.find()
 
-7. Crear otras collections con documentos (ej. teams, games, etc).
+**7. Crear otras collections con documentos (ej. teams, games, etc).**
 
     $db.createCollections("teams")
     {

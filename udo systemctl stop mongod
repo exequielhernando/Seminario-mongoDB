@@ -1,0 +1,12 @@
+[0;1;32m●[0m mongod.service - MongoDB Database Server
+     Loaded: loaded (/lib/systemd/system/mongod.service; enabled; vendor preset: enabled)
+     Active: [0;1;32mactive (running)[0m since Sat 2020-11-07 14:00:01 -03; 1min 47s ago
+       Docs: https://docs.mongodb.org/manual
+   Main PID: 18011 (mongod)
+     Memory: 108.7M
+     CGroup: /system.slice/mongod.service
+             └─18011 /usr/bin/mongod --config /etc/mongod.conf
+
+nov 07 14:00:01 exequiel-Aspire systemd[1]: Started MongoDB Database Server.
+nov 07 14:01:00 exequiel-Aspire systemd[1]: [0;1;39m[0;1;31m[0;1;39m/lib/systemd/system/mongod.service:11: PIDFile= references a path below legacy directory /var/run/, updating /var/run/mongodb/mongod.pid → /run/mongodb/mongod.pid; please update the unit file accordingly.[0m
+nov 07 14:01:03 exequiel-Aspire systemd[1]: [0;1;39m[0;1;31m[0;1;39m/lib/systemd/system/mongod.service:11: PIDFile= references a path below legacy directory /var/run/, updating /var/run/mongodb/mongod.pid → /run/mongodb/mongod.pid; please update the unit file accordingly.[0m
