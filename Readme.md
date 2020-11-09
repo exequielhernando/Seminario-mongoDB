@@ -4,22 +4,6 @@
 
 ## [Actividad 2](https://github.com/exequielhernando/Seminario-mongoDB/blob/main/actividad1.md)
 
-[asd][1]
+[[nombre que quieres darle a tu enlace][nombre de tu referencia]
 
-
-
-
-asda
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-
-[1]
+[nombre de tu referencia]: http:www.tuenlace.com
