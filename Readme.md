@@ -4,7 +4,7 @@
 
 ## [Actividad 2](https://github.com/exequielhernando/Seminario-mongoDB/blob/main/actividad1.md)
 
-[asd](1)
+[asd][1]
 
 
 
@@ -22,4 +22,4 @@ a
 a
 a
 
-(1)
+[1]
