@@ -1,1 +1,1 @@
-udo systemctl stop mongod
+.udo systemctl stop mongod
