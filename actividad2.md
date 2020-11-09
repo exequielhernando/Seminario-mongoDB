@@ -309,10 +309,7 @@
             $set: { 
                 highlighted: true 
             } 
-        }, 
-        { 
-                upsert: true
-        } 
+        }
     )
 
 **5. 	Actualizar películas cambiando el genre “drama” por “bored”.**
