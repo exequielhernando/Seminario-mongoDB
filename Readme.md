@@ -1,12 +1,11 @@
 # Seminario MongoDB (NoSQL)
 
-## [Actividad 1](https://github.com/exequielhernando/Seminario-mongoDB/blob/main/actividad1.md)
-
-## [Actividad 2](https://github.com/exequielhernando/Seminario-mongoDB/blob/main/actividad1.md)
+### **Index**
 
 1. [Actividad 1](#Actividad-1)
 
 2. [Actividad 2](#Actividad-2)
+
 
 ### **Actividad 1**
 
@@ -102,8 +101,10 @@
         }
 
     ])
-    
-### **Actividad 1**
+
+→ [index](#index)
+
+### **Actividad 2**
 
 **1 Crear una nueva base de datos de un sistema de streaming de video (ej. Netflix, Flow, Amazon Prime) que permita almacenar movies.**
 
@@ -458,3 +459,5 @@
             title: 1
         }
     )
+
+→ [index](#index)
