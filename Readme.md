@@ -6,6 +6,7 @@
 
 2. [Actividad 2](#Actividad-2)
 
+3. [Actividad 3](#Actividad-3)
 
 ### **Actividad 1**
 
@@ -459,5 +460,100 @@
             title: 1
         }
     )
+
+→ [index](#index)
+
+### **Actividad 3**
+
+**1. Utilizar la misma base de datos de películas e insertar varias películas con distinto contenido.**
+
+    db.movies.insertMany([
+        {
+            title: "Rapido y Furioso",
+            year: 2001,
+            rating: 4.9,
+            genre: "Accion",
+            description: "Brian O´conner investiga a Toreto",
+            actors:["Vin Diesel", "Paul Walker", "Jordana Brewster", "Michelle Rodriguez"],
+            country: "EEUU",
+            income:38000000,
+            duration: 107 
+        },
+        {
+            title: "Rapido y Furioso 2",
+            year: 2003,
+            rating: 4.3,
+            genre: "Accion",
+            description: "Brian O´conner investiga a un capo de la droga",
+            actors:["Tyrese Gibson", "Paul Walker", "Chris Bridges", "Devon Aoki"],
+            country: "EEUU",
+            income:76000000,
+            duration: 107 
+        },
+       {
+            title: "Rapido y Furioso 3",
+            year: 2006,
+            rating: 4.1,
+            genre: "Accion",
+            description: "Sean se muda con su padre a tokio para que no lo metan en prision y comienza con las carreras de draf",
+            actors:["Lucas Black", "Sung Kang", "Bow Wow", "Leonardo Nam"],
+            country: "EEUU",
+            income:85000000,
+            duration: 104 
+        },
+        {
+            title: "Rapidos y Furiosos",
+            year: 2009,
+            rating: 4.4,
+            genre: "Accion",
+            description: "Brian y Toreto se vuelven a encontrar para descubrir al asesino de Letty",
+            actors:["Vin Diesel", "Paul Walker", "Michelle Rodriguez", "Jordana Brewster", "Gal Gadot", "Don Omar"],
+            country: "EEUU",
+            income:85000000,
+            duration: 107 
+        },
+        {
+            title: "Rapidos y Furiosos 5ntrol",
+            year: 2011,
+            rating: 4.8,
+            genre: "Accion",
+            description: "Brian y Toreto se reunen con Vince en brasil e intentar robarle al capo más grande de la droga",
+            actors:["Vin Diesel", "Paul Walker", "Michelle Rodriguez", "Jordana Brewster", "Gal Gadot", "Don Omar", "Tego Calderon"],
+            country: "EEUU",
+            income:125000000,
+            duration: 130 
+        },
+    ])
+
+**2. Listar todas las películas del año 2018.**
+ 
+    db.movies.find(
+        {
+            year:2018
+        }
+    )
+
+**3. Listar las 10 primeras películas de Hollywood.**
+
+    db.movies.find( { country: "Hollywood" } ).limit(10)
+
+**4. Listar las 5 películas más taquilleras.**
+
+    db.movies.find( { } ).sort( {rating:1} ).limit(5)
+
+**5. Listar el 2do conjunto de 5 películas más taquilleras.**
+
+    db.movies.find( { } ).sort( {rating:1} ).skip(5).limit(5)
+
+**6. Repetir query 3 y 4 pero retornando sólo el título y genre.**
+
+    db.movies.find( { country: "Hollywood" }, {title:1, genre:1, _id:0} ).limit(10)
+
+    db.movies.find( { },{title:1, genre:1, _id:0} ).sort( {rating:1} ).limit(5)
+
+
+**7. Mostrar los distintos países que existen en la base de datos.**
+
+    db.movies.distinct("country")
 
 → [index](#index)
