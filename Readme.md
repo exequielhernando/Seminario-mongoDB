@@ -148,17 +148,7 @@
             rating: 4.5,
             genre: "Accion",
             description: "La revancha de Rocky contra Apollo por el titulo",
-            actors:[
-                {
-                    name:"Silvester Stalone"
-                },
-                {
-                    name:"Mickael Jackson"
-                },
-                {
-                    name: "Sharon Stone"
-                }
-            ],
+            actors:["Silvester Stalone", "Mickael Jackson", "Sharon Stone"],
             country: "EEUU",
             income:798465,
             duration: 128 
@@ -172,20 +162,7 @@
             rating: 4.0,
             genre: "Accion",
             description: "Rocky tiene un nuevo rival el cual mato a su amigo Apollo",
-            actors:[
-                {
-                    name:"Silvester Stalone"
-                },
-                {
-                    name:"Mickael Jackson"
-                },
-                {
-                    name: "Sharon Stone"
-                },
-                {
-                    name: "Mike Tyson"
-                }
-            ],
+            actors:["Silvester Stalone", "Mickael Jackson", "Sharon Stone", "Mike Tyson"],
             country: "EEUU",
             income:1298465,
             duration: 108 
@@ -196,20 +173,7 @@
             rating: 4.8,
             genre: "Accion",
             description: "Rocky contra el tanque ruso",
-            actors:[
-                {
-                    name:"Silvester Stalone"
-                },
-                {
-                    name:"Mickael Jackson"
-                },
-                {
-                    name: "Sharon Stone"
-                },
-                {
-                    name: "Ruso Polaski"
-                }
-            ],
+            actors:["Silvester Stalone", "Mickael Jackson", "Sharon Stone", "Ruso Polaski"],
             country: "EEUU",
             income:1798465,
             duration: 138 
@@ -220,20 +184,7 @@
             rating: 4.1,
             genre: "Accion",
             description: "Rocky vuelve al barrio y se encuentra con un aprendiz, dispuesto a luchar por el titulo",
-            actors:[
-                {
-                    name:"Silvester Stalone"
-                },
-                {
-                    name:"Mickael Jackson"
-                },
-                {
-                    name: "Sharon Stone"
-                },
-                {
-                    name: "Tommy Gun"
-                }
-            ],
+            actors:["Silvester Stalone", "Mickael Jackson", "Sharon Stone", "Tommy Gun"],
             country: "EEUU",
             income:1498465,
             duration: 112 
@@ -247,17 +198,7 @@
             rating: 4.9,
             genre: "Fantasia",
             description: "Harry descubre la verdad sobre sus origenes",
-            actors:[
-                {
-                    name:"Daniel Radclife"
-                },
-                {
-                    name:"Emma Watson"
-                },
-                {
-                    name: "Rupert Green"
-                }
-            ],
+            actors:["Daniel Radclife", "Emma Watson", "Rupert Green"],
             country: "Reino Unido",
             income:1500000,
             duration: 130 
@@ -268,17 +209,7 @@
             rating: 4.4,
             genre: "Fantasia",
             description: "La camara de los secretos ha sido abierta",
-            actors:[
-                {
-                    name:"Daniel Radclife"
-                },
-                {
-                    name:"Emma Watson"
-                },
-                {
-                    name: "Rupert Green"
-                }
-            ],
+            actors:["Daniel Radclife", "Emma Watson", "Rupert Green"],
             country: "Reino Unido",
             income:2340000,
             duration: 126 
@@ -289,20 +220,7 @@
             rating: 4.7,
             genre: "Fantasia",
             description: "Sirius Black se ha escapado de Azkaban",
-            actors:[
-                {
-                    name:"Daniel Radclife"
-                },
-                {
-                    name:"Emma Watson"
-                },
-                {
-                    name: "Rupert Green"
-                },
-                {
-                    name: "Sirius Black"
-                }
-            ],
+            actors:["Daniel Radclife", "Emma Watson", "Rupert Green", "Sirius Black"],
             country: "Reino Unido",
             income:4300000,
             duration: 133 
@@ -313,20 +231,7 @@
             rating: 4.3,
             genre: "Fantasia",
             description: "El torneo de los tres magos comienza, quien ganará?",
-            actors:[
-                {
-                    name:"Daniel Radclife"
-                },
-                {
-                    name:"Emma Watson"
-                },
-                {
-                    name: "Rupert Green"
-                },
-                {
-                    name: "Robert Pattinson"
-                }
-            ],
+            actors:["Daniel Radclife", "Emma Watson", "Rupert Green", "Robert Pattinson"],
             country: "Reino Unido",
             income:12500000,
             duration: 142 
@@ -336,20 +241,7 @@
             rating: 4.8,
             genre: "Fantasia",
             description: "La orden del fenix vuelve a formarse para combatir el mal",
-            actors:[
-                {
-                    name:"Daniel Radclife"
-                },
-                {
-                    name:"Emma Watson"
-                },
-                {
-                    name: "Rupert Green"
-                },
-                {
-                    name: "Luna Lovegood"
-                }
-            ],
+            actors:["Daniel Radclife", "Emma Watson", "Rupert Green", "Luna Lovegood"],
             country: "Reino Unido",
             income:14500000,
             duration: 133 
@@ -360,20 +252,7 @@
             rating: 4.1,
             genre: "Fantasia",
             description: "El principe mestizo deslumbra a Harry con sus conocimientos",
-            actors:[
-                {
-                    name:"Daniel Radclife"
-                },
-                {
-                    name:"Emma Watson"
-                },
-                {
-                    name: "Rupert Green"
-                },
-                {
-                    name: "Alan Rickman"
-                }
-            ],
+            actors:[name:"Daniel Radclife", "Emma Watson", "Rupert Green", "Alan Rickman"],
             country: "Reino Unido",
             income:16500000,
             duration: 141 
@@ -384,20 +263,7 @@
             rating: 5.0,
             genre: "Fantasia",
             description: "La batalla final está por comenzar",
-            actors:[
-                {
-                    name:"Daniel Radclife"
-                },
-                {
-                    name:"Emma Watson"
-                },
-                {
-                    name: "Rupert Green"
-                },
-                {
-                    name: "Lord Voldemort"
-                }
-            ],
+            actors:["Daniel Radclife", "Emma Watson", "Rupert Green", "Lord Voldemort"],
             country: "Reino Unido",
             income:23500000,
             duration: 180 
