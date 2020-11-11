@@ -538,4 +538,5 @@
     db.movies.find(
         {$text: { $search: "Rocky" }, {_id:0, title:1}}
     )
+    
 → [index](#index)
