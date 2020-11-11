@@ -8,6 +8,8 @@
 
 3. [Actividad 3](#Actividad-3)
 
+4. [Actividad 4](#Actividad-4)
+
 ### **Actividad 1**
 
 
@@ -422,4 +424,118 @@
 
     db.movies.distinct("country")
 
+→ [index](#index)
+
+### **Actividad 4**
+
+**1. Utilizar la misma base de datos de películas e insertar varias películas (al menos 30) con distinto contenido.**
+
+    db.movies.insertMany([
+        {
+            title: "La momia",
+            year: 1999,
+            rating: 4.2,
+            genre: "Aventura",
+            description: "Rick O´connel tiene que enterrar a Imhotep quien fue revivido por unos arqueologos",
+            actors:["Brendan Fraser", "Rachel Weisz", "John Hannah"],
+            country: "EEUU",
+            income:84500000,
+            duration: 124 
+        },
+        {
+            title: "La momia regresa",
+            year: 2001,
+            rating: 4.7,
+            genre: "Aventura",
+            description: "Rick O´connel vuelve a enfrentar a Imhotepp, pero se suma el rey escorpion a la batalla",
+            actors:["Brendan Fraser", "Rachel Weisz", "John Hannah", "Dwayne Johnson"],
+            country: "EEUU",
+            income:10500000,
+            duration: 130 
+        },
+        {
+            title: "La momia",
+            year: 2017,
+            rating: 3.8,
+            genre: "Aventura",
+            description: "Un equipo de arqueologos de londres descubre la tumba de los caballeros y un misterioso hombre el cual resulta ser una momia egipcia",
+            actors:["Tom Cruise", "Annabelle Wallis", "Sofia Boutella", "Jake Johnson"],
+            country: "EEUU",
+            income:125000000,
+            duration: 107 
+        },
+        {
+            title: "Relatos Salvajes",
+            year: 2014,
+            rating: 4.9,
+            genre: "Drama",
+            description: "6 historias de momentos de ira de los cuales estamos expuestos dia a dia",
+            actors:["Ricardo Darin", "Oscar Martinez", "Leonardo Sbaraglia", "Erica Rivas", "Rita Cortese"],
+            country: "Argentina",
+            income:4000000,
+            duration: 122 
+        },
+        {
+            title: "El clan",
+            year: 2015,
+            rating: 4.6,
+            genre: "Drama",
+            description: "Una familia típica, más que una familia, una secta",
+            actors:["Guillermo Francella", "Peter Lanzani", "Gaston Cocchiarale"],
+            country: "Argentina",
+            income: 3500000,
+            duration: 110 
+        },
+        {
+            title: "Mi obra maestra",
+            year: 2018,
+            rating: 3.6,
+            genre: "Comedia",
+            description: "Un artista simula su muerte para revalorizar sus obras",
+            actors:["Guillermo Francella", "Luis Brandoni"],
+            country: "Argentina",
+            income: 2500000,
+            duration: 109 
+        },
+        {
+            title: "La cordillera",
+            year: 2017,
+            rating: 3.8,
+            genre: "Drama",
+            description: "Hernán Blanco, el presidente de Argentina, atraviesa un drama político y familiar. Está implicado en un caso de corrupción a través de su yerno",
+            actors:["Ricardo Darin", "Dolores Fonzi"],
+            country: "Argentina",
+            income: 6000000,
+            duration: 114 
+        },
+    ])
+
+**2. Crear índice en field rating y luego hacer búsquedas usando este campo.**
+
+    db.movies.createIndex({ rating : 1 })
+
+    db.movies.find({rating:3.8})
+    
+    db.movies.find({rating:3.8}).explain("executionStats")
+ 
+**3. Crear índice en title y description, y después hacer búsquedas de texto en estos campos.**
+
+    db.movies.createIndex({
+        title: "text",
+        description: "text"  
+    },
+    {
+        weights: {
+        title: 10,
+        description: 5
+        },
+    })
+
+    db.movies.find(
+        {$text: { $search: "Harry" }, {_id:0, title:1}}
+    )
+
+    db.movies.find(
+        {$text: { $search: "Rocky" }, {_id:0, title:1}}
+    )
 → [index](#index)
