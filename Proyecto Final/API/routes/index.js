@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const productoController = require('../controllers/productoControllers');
+const ventaController = require('../controllers/ventaControllers');
 
 module.exports = function () {
 
@@ -28,5 +29,21 @@ module.exports = function () {
     router.delete('/productos/:id',
         productoController.eliminarProducto
     )
+
+    //Agregar nuevas ventas de productos
+    router.post('/ventas',
+        ventaController.nuevaVenta
+    )
+
+    //obtiene todas los regristros de ventas de la BD
+    router.get('/ventas',
+        ventaController.obtenerVentas
+    )
+    
+    //obtener una venta id especifico
+    router.get('/ventas/:id',
+        ventaController.obtenerVenta
+    )
+
     return router;
 }
