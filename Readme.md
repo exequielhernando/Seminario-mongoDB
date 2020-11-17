@@ -13,13 +13,13 @@
 
 [Actividades](#Actividades)
 
-    1. [Actividad 1](#Actividad-1)
+   1. [Actividad 1](#Actividad-1)
 
-    2. [Actividad 2](#Actividad-2)
+   2. [Actividad 2](#Actividad-2)
 
-    3. [Actividad 3](#Actividad-3)
+   3. [Actividad 3](#Actividad-3)
 
-    4. [Actividad 4](#Actividad-4)
+   4. [Actividad 4](#Actividad-4)
 
 
 ### **Introduccion**
