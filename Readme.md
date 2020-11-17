@@ -32,6 +32,8 @@
     
     Una de las diferencias más importantes con respecto a las bases de datos relacionales, es que no es necesario seguir un esquema.
     Los documentos de una misma colección, concepto similar a una tabla de una base de datos relacional, pueden tener esquemas diferentes.
+
+→ [index](#index)
 - ### **Terminologia**
 
                                                ***_SQL                      NoSQL (MongoDB)_***
@@ -46,6 +48,7 @@
 
                                                   Stored Procedure          -
 
+→ [index](#index)
 - ### **Tipo-datos**
 
     - String: Cualquier cadena de caracteres codificada en utf-8. Debe ir entre comillas dobles.
@@ -56,6 +59,8 @@
     - null: Se refiere a un valor nulo o vacío.
     - undefined: Indica un dato que no ha sido definido.
     - Array: Agrupación de elementos a manera de lista a partir de la posición 0. En MongoDB se pueden usar los métodos de iteración de  arreglos disponibles en JS.
+
+→ [index](#index)
 - ### **Comandos-basicos**
 
     - Start MongoDB server
@@ -76,6 +81,8 @@
         - db.countries.insert({name: “Argentina”, rank: 10,_id: xxxxxxx})
     - Display all documents in collection
         - db.countries.find()
+
+→ [index](#index)
 - ### **CRUD**
 
     ***_CRUD es un acrónimo por Create, Read, Update y Delete._***
@@ -179,6 +186,7 @@
 
         - * > DELETE FROM countries WHERE name = “Uruguay” LIMIT 1*
 
+→ [index](#index)
 ### **Actividades**
 
 ### **Actividad 1**
