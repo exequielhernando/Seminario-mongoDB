@@ -1,14 +1,185 @@
 # Seminario MongoDB (NoSQL)
-
 ### **Index**
 
-1. [Actividad 1](#Actividad-1)
+[Introduccion](#Introduccion)
 
-2. [Actividad 2](#Actividad-2)
+[Terminologia](#Terminologia)
 
-3. [Actividad 3](#Actividad-3)
+[Tipos de datos](#Tipo-datos)
 
-4. [Actividad 4](#Actividad-4)
+[Comandos Basicos](#Comandos-basicos)
+
+[CRUD en MongoDB](#CRUD)
+
+[Actividades](#Actividades)
+
+    1. [Actividad 1](#Actividad-1)
+
+    2. [Actividad 2](#Actividad-2)
+
+    3. [Actividad 3](#Actividad-3)
+
+    4. [Actividad 4](#Actividad-4)
+
+
+### **Introduccion**
+
+- **. ¿Qué es MongoDB? .**
+
+    Es una de las bases de datos NoSQL más famosas.
+
+    MongoDB es una base de datos orientada a documentos. Esto quiere decir que en lugar de guardar los datos en registros, guarda los datos en documentos. Estos documentos son almacenados en BSON, que es una representación binaria de JSON.
+    
+    Una de las diferencias más importantes con respecto a las bases de datos relacionales, es que no es necesario seguir un esquema.
+    Los documentos de una misma colección, concepto similar a una tabla de una base de datos relacional, pueden tener esquemas diferentes.
+- ### **Terminologia**
+
+ ***_SQL        NoSQL (MongoDB)_***
+
+    Table       Collection
+
+    Row         Document
+    
+    Column      Field
+    
+    PK          ObjectId
+    
+    Stored      Procedure    -
+
+- ### **Tipo-datos**
+
+    - String: Cualquier cadena de caracteres codificada en utf-8. Debe ir entre comillas dobles.
+    - Number: Valores numéricos formados por dígitos (con o sin punto decimal). No debe ir entre comillas dobles.
+    - Boolean: true o false. Sin comillas.
+    - Timestamp: Un dato de 64bits que representa una fecha con hora.
+    - Date: Un dato de 32bits que representa una fecha.
+    - null: Se refiere a un valor nulo o vacío.
+    - undefined: Indica un dato que no ha sido definido.
+    - Array: Agrupación de elementos a manera de lista a partir de la posición 0. En MongoDB se pueden usar los métodos de iteración de  arreglos disponibles en JS.
+- ### **Comandos-basicos**
+
+    - Start MongoDB server
+        - $ mongod
+    - Connect to MongoDB using CLI
+        - $ mongo
+    - Help command
+        - > help
+    - Show databases
+        - > show dbs
+    - Connect or create a database
+        - > use <dbname>
+    - Show collections in current database
+        - > show collections
+    - Create new collection
+        - > db.createCollection(“countries”)
+    - Insert a document
+        - > db.countries.insert({name: “Argentina”, rank: 10,_id: xxxxxxx})
+    - Display all documents in collection
+        - > db.countries.find()
+- ### **CRUD**
+
+    ***_CRUD es un acrónimo por Create, Read, Update y Delete._***
+
+    - [Create](#Create)
+
+    - [Read](#Read)
+    
+    - [Update](#Update)
+    
+    - [Delete](#Delete)
+
+    ### **Create**
+
+    - Create: Insert one document
+
+        - > db.countries.insert({name: “Brasil”}) 
+            *Retorna un WriteResult object*
+
+        - > db.countries.insertOne({name: “Brasil”})
+            *Retorna el documento creado*
+
+    - Create: Insert multiple documents
+
+        - > db.countries.insert([{name: “Chile”}, {name: “Peru”},{name: “Uruguay”}])
+            *Retorna un BulkWriteResult object*
+
+        - > db.countries.insertMany([{name: “Chile”}, {name: “Peru”},{name: “Uruguay”}])
+            * Retorna ObjectIds de los documentos creados *
+
+    ### **Read**
+
+    - Read: Find all documents
+
+        - > db.countries.find()
+
+        - > db.countries.find({})
+
+        - *> SELECT * FROM countries*
+
+    - Read: Find documents with name “Argentina”
+
+        - > db.countries.find({name: “Argentina”,$or: { continente: “América”,poblacion: 100 },})
+
+        - * > SELECT * FROM countries WHERE name = "Argentina" and (continente = “América” or poblacion = 100) *
+
+    - Read: First document only
+
+        - > db.countries.find().limit(1)
+
+        - > db.countries.findOne()
+
+        - *> SELECT * FROM countries LIMIT 1*
+
+    - Read: Fetch only the “name” field
+
+        - > db.countries.find({}, {name: 1})
+
+        - *> SELECT _id, name FROM countries*
+
+        - > db.countries.find({}, {name: 1, _id: 0})
+
+        - *> SELECT name FROM countries*    
+        
+    - Read: Find documents with population > 30
+
+        - > db.countries.find({population: {$gt: 30}})
+
+        - *> SELECT * FROM countries WHERE population > 30*
+        
+        $gt: greater than (>)
+
+    ### **Update**
+
+
+    - Update: Change food for all countries with name “Argentina”
+
+        - > db.countries.updateMany({ name: “Argentina” }, { $set: { food: “Asado” } })
+
+        - *> UPDATE countries SET food = “Asado” WHERE name = “Argentina”*
+    
+    - Update: Change food for all countries with name “China”
+
+        - > db.countries.updateMany( { name: “China” }, { $set: { food: “Arróz” } })
+
+    - Upsert: If doesn’t exist, create it
+
+        - > db.countries.updateMany({ name: “China” },{ $set: {food: “Arróz”} }, { upsert: true })
+    ### **Delete**
+
+
+    - Delete: Remove all countries with name “Uruguay”
+
+        - > db.countries.deleteMany({name: “Uruguay“})
+
+        - *> DELETE FROM countries WHERE name = “Uruguay”*
+
+    - Delete: Remove only first document with name “Uruguay”
+
+        - > db.countries.deleteOne({name: “Uruguay“})
+
+        - *> DELETE FROM countries WHERE name = “Uruguay” LIMIT 1*
+
+### **Actividades**
 
 ### **Actividad 1**
 
