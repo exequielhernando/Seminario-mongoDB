@@ -95,30 +95,30 @@
         - db.countries.insert({name: “Brasil”}) 
             *Retorna un WriteResult object*
 
-        - > db.countries.insertOne({name: “Brasil”})
+        - db.countries.insertOne({name: “Brasil”})
             *Retorna el documento creado*
 
     - Create: Insert multiple documents
 
-        - > db.countries.insert([{name: “Chile”}, {name: “Peru”},{name: “Uruguay”}])
+        - db.countries.insert([{name: “Chile”}, {name: “Peru”},{name: “Uruguay”}])
             *Retorna un BulkWriteResult object*
 
         - > db.countries.insertMany([{name: “Chile”}, {name: “Peru”},{name: “Uruguay”}])
-            * Retorna ObjectIds de los documentos creados *
+            *Retorna ObjectIds de los documentos creados*
 
     ### **Read**
 
     - Read: Find all documents
 
-        - > db.countries.find()
+        - db.countries.find()
 
-        - > db.countries.find({})
+        - db.countries.find({})
 
         - *> SELECT * FROM countries*
 
     - Read: Find documents with name “Argentina”
 
-        - > db.countries.find({name: “Argentina”,$or: { continente: “América”,poblacion: 100 },})
+        - db.countries.find({name: “Argentina”,$or: { continente: “América”,poblacion: 100 },})
 
         - * > SELECT * FROM countries WHERE name = "Argentina" and (continente = “América” or poblacion = 100) *
 
