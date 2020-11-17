@@ -34,17 +34,17 @@
     Los documentos de una misma colección, concepto similar a una tabla de una base de datos relacional, pueden tener esquemas diferentes.
 - ### **Terminologia**
 
-                                                 ***_SQL                      NoSQL (MongoDB)_***
+                                               ***_SQL                      NoSQL (MongoDB)_***
 
-                                                    Table                     Collection
+                                                  Table                     Collection
 
-                                                    Row                       Document
+                                                  Row                       Document
 
-                                                    Column                    Field
+                                                  Column                    Field
 
-                                                    PK                        ObjectId
+                                                  PK                        ObjectId
 
-                                                    Stored Procedure          -
+                                                  Stored Procedure          -
 
 - ### **Tipo-datos**
 
