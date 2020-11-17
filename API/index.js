@@ -6,10 +6,10 @@ const bodyParser = require('body-parser');
 
 //Crear el servidor
 const server = express();
-const app = http.createServer(server);
-const io = socketio.listen(app);
+//const app = http.createServer(server);
+//const io = socketio.listen(app);
 
-//Conectar a mongod
+//Conectar a mongodb
 
 mongoose.Promise = global.Promise;
 /*mongoose.connect('mongodb://localhost/tecnocompras', {
@@ -34,14 +34,16 @@ server.use('/', routes());
 server.set('port', process.env.PORT || 3000);
 
 //static files
-server.use(express.static(path.join(__dirname, 'public')));
+//server.use(express.static(path.join(__dirname, 'public')));
 
+// sockets
+//require('./socket')(io);
 // puerto y arrancar el servidor
 
 /*server.listen(4000, () => {
   console.log("Servidor funcionando");  
 })*/
 
-app.listen(server.get('port'), () =>{
+server.listen(server.get('port'), () =>{
   console.log(`server on port ${server.get('port')}`);
 });
