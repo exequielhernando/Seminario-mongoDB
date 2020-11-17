@@ -63,19 +63,19 @@
     - Connect to MongoDB using CLI
         - $ mongo
     - Help command
-        - > help
+        - help
     - Show databases
-        - > show dbs
+        - show dbs
     - Connect or create a database
-        - > use <dbname>
+        - use <dbname>
     - Show collections in current database
-        - > show collections
+        - show collections
     - Create new collection
-        - > db.createCollection(“countries”)
+        - db.createCollection(“countries”)
     - Insert a document
-        - > db.countries.insert({name: “Argentina”, rank: 10,_id: xxxxxxx})
+        - db.countries.insert({name: “Argentina”, rank: 10,_id: xxxxxxx})
     - Display all documents in collection
-        - > db.countries.find()
+        - db.countries.find()
 - ### **CRUD**
 
     ***_CRUD es un acrónimo por Create, Read, Update y Delete._***
@@ -92,7 +92,7 @@
 
     - Create: Insert one document
 
-        - > db.countries.insert({name: “Brasil”}) 
+        - db.countries.insert({name: “Brasil”}) 
             *Retorna un WriteResult object*
 
         - > db.countries.insertOne({name: “Brasil”})
