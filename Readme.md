@@ -760,6 +760,8 @@
     - Links con referencias a documentación/tutorial que siguieron
     - Cualquier información consideren relevante.
 
+→ [index](#index)
+
 ### **Resultado-Proyecto-Final**
 
 1. La aplicacion fue desarrollada en Node js, express, mongoose
