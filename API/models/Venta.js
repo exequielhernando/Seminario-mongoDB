@@ -3,10 +3,8 @@ const Schema = mongoose.Schema;
 
 const ventasSchema = new Schema({
     productos:[{
-        producto: { 
-            type: mongoose.Schema.Types.ObjectId, 
-            ref: 'Producto'
-        }
+        type: mongoose.Schema.Types.ObjectId, 
+        ref: 'Producto'
     }],
     direccion_entrega:{
         type: String,
