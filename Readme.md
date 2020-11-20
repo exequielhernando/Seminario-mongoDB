@@ -772,35 +772,8 @@
 
     - [API](https://tecnocompras.herokuapp.com)
         
-        ## PRODUCTOS
+    - [Endpoints](https://documenter.getpostman.com/view/8287019/TVetaR2g)
 
-        ### POST /products
-        - /productos
-
-        ### GET /products
-        - /productos
-
-        ### GET /products/:id
-        - /productos/:id
-
-        ### PUT /products
-        - /productos/:id
-
-        ### DELETE /products
-        - /productos/:id
-
-        ### POST /products
-        - /productos
-
-        ## VENTAS
-
-        ### POST /ventas
-        - /ventas
-
-         ### GET /ventas
-        - /ventas
-
-         ### GET /ventas/:id
-        - /ventas
-
+    Utilizar postman para probar la API
+    
 → [index](#index)
