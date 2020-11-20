@@ -30,7 +30,11 @@ exports.nuevaVenta = async ( req, res, next ) => {
 exports.obtenerVentas = async (req, res, next) => {
       
     try {
+<<<<<<< HEAD
         const ventas = await Venta.find({}).populate('productos');
+=======
+        const ventas = await Venta.find({});
+>>>>>>> 0963a1f2bc25e67a1a2f772f971ecc54061d596a
         res.json(ventas); 
     } catch (error) {
         console.log(error);

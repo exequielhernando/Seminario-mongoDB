@@ -1,17 +1,17 @@
 # Seminario MongoDB (NoSQL)
 ### **Index**
 
-[Introduccion](#Introduccion)
+- [Introduccion](#Introduccion)
 
-[Terminologia](#Terminologia)
+- [Terminologia](#Terminologia)
 
-[Tipos de datos](#Tipo-datos)
+- [Tipos de datos](#Tipo-datos)
 
-[Comandos Basicos](#Comandos-basicos)
+- [Comandos Basicos](#Comandos-basicos)
 
-[CRUD en MongoDB](#CRUD)
+- [CRUD en MongoDB](#CRUD)
 
-[Actividades](#Actividades)
+- [Actividades](#Actividades)
 
    1. [Actividad 1](#Actividad-1)
 
@@ -20,6 +20,10 @@
    3. [Actividad 3](#Actividad-3)
 
    4. [Actividad 4](#Actividad-4)
+
+- [Proyecto Final](#Proyecto-Final)
+
+- [Resolucion Proyecto Final](#Resolucion-Proyecto-Final)
 
 
 ### **Introduccion**
@@ -718,4 +722,85 @@
         {$text: { $search: "Rocky" }, {_id:0, title:1}}
     )
     
+→ [index](#index)
+
+### **Proyecto-Final**
+
+**Trabajo Final**
+
+1.	Construir una aplicación (sin interfaz) utilizando la tecnología que deseen (ej. Node.js, PHP, Java, Python, etc) integrada con MongoDB.
+
+
+2.	La aplicación debería similar un pequeño eCommerce: manejo de productos y ventas. Puntualmente sería:
+
+	- CRUD de Productos, donde cada uno tiene información como 	nombre, descripción, stock, precio.
+	
+    - Creación y listado de Ventas, donde cada una relaciona un conjunto de Productos, precio total y dirección de entrega.
+
+3. 	La interface con el backend puede ser de una de las dos maneras:
+
+	- RESTful APIs: Construir HTTP endpoints.
+
+        HTTP POST /products
+
+        HTTP GET /products
+
+        HTTP POST /sales
+
+    - Vía terminal: Poder invocar a la aplicación desde línea de comandos:
+        $ node app.js --item=product --action=create --name=”camera” --price=100 --stock=550
+
+        $ node app.js --item=product --action=list
+
+        $ node app.js --item=sale --action=create --products=1,2,3 --totalPrice=250
+
+4.	Entrega: Repositorio de git. Incluir un readme.md con:
+
+    - Instrucciones para levantar el ambiente, 
+    - Links con referencias a documentación/tutorial que siguieron
+    - Cualquier información consideren relevante.
+
+→ [index](#index)
+
+### **Resultado-Proyecto-Final**
+
+1. La aplicacion fue desarrollada en Node js, express, mongoose
+
+2. Se desarrollo un CRUD de Productos y uno de Ventas de dichos productos
+
+3. Se creo una RESTful API con los siguientes endpoints
+
+    - [API](https://tecnocompras.herokuapp.com)
+        
+        ## PRODUCTOS
+
+        ### POST /products
+        - /productos
+
+        ### GET /products
+        - /productos
+
+        ### GET /products/:id
+        - /productos/:id
+
+        ### PUT /products
+        - /productos/:id
+
+        ### DELETE /products
+        - /productos/:id
+
+        ### POST /products
+        - /productos
+
+        ## VENTAS
+
+        ### POST /ventas
+        - /ventas
+
+         ### GET /ventas
+        - /ventas
+
+         ### GET /ventas/:id
+        - /ventas
+
 → [index](#index)
