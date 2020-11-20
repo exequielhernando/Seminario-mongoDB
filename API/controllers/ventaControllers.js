@@ -1,20 +1,21 @@
+const mongoose = require('mongoose');
 const Venta = require('../models/Venta');
 const Producto = require('../models/Producto');
 
 exports.nuevaVenta = async ( req, res, next ) => {
 
     //Crear objeto venta con datos de req.body
-    let total = 0;
     const venta = new Venta(req.body);
-    for (let i = 0; i < venta.productos.length; i++) {
-        let id = venta.productos[i].producto.id;
-        let producto = Producto.findById(id)
+   
+    let ids = venta.productos;
+    let totalProductos = await Producto.find({'_id':{$in:ids}});
+    totalProductos.forEach(producto => {
+        venta.precio_total += producto.populate('precio').precio;
+        producto.stock--;
+        producto.save();
+    });
 
-        total += producto.precio;
-    }
-    venta.set(precio_total) = total;
     try {
-        console.log(venta);
         await venta.save();
         res.json({  mensaje :  'La venta se agrego correctamente'});
     } catch (error) {
@@ -27,9 +28,9 @@ exports.nuevaVenta = async ( req, res, next ) => {
 //Obtiene todas las ventas
 
 exports.obtenerVentas = async (req, res, next) => {
+      
     try {
-
-        const ventas = await Venta.find({});
+        const ventas = await Venta.find({}).populate('productos');
         res.json(ventas); 
     } catch (error) {
         console.log(error);
@@ -41,7 +42,7 @@ exports.obtenerVentas = async (req, res, next) => {
 //Obtiene un producto id 
 exports.obtenerVenta = async (req, res, next) => {
     try {
-        const ventas = await Venta.findById(req.params.id);
+        const ventas = await Venta.findById(req.params.id).populate('productos');
         res.json(ventas);
     } catch (error) {
         console.log(error);
