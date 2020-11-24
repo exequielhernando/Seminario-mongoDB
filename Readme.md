@@ -803,4 +803,12 @@
          ### GET /ventas/:id
         - /ventas
 
+### **Documentacion/Tutoriales**
+    
+    - [mongoose]( https://mongoosejs.com)
+    - [Node.js]( https://desarrolloweb.com/manuales/manual-nodejs.html)
+    - [API con nodejs, MongoDB]( https://mikenieva.com/backend-node-tienda-online-guitarras/)
+    - [API con nodejs, MongoDB]( https://medium.com/techwomenc/crea-una-api-con-nodejs-and-mongodb-f315c73e28fe)
+    - [Heroku]( https://www.heroku.com/)
+
 → [index](#index)
