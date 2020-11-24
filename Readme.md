@@ -772,37 +772,9 @@
 
     - [API](https://tecnocompras.herokuapp.com)
         
-        ## PRODUCTOS
+    - [Endpoints](https://documenter.getpostman.com/view/8287019/TVetaR2g)
 
-        ### POST /products
-        - /productos
-
-        ### GET /products
-        - /productos
-
-        ### GET /products/:id
-        - /productos/:id
-
-        ### PUT /products
-        - /productos/:id
-
-        ### DELETE /products
-        - /productos/:id
-
-        ### POST /products
-        - /productos
-
-        ## VENTAS
-
-        ### POST /ventas
-        - /ventas
-
-         ### GET /ventas
-        - /ventas
-
-         ### GET /ventas/:id
-        - /ventas
-
+<<<<<<< HEAD
 ### **Documentacion/Tutoriales**
     
     - [mongoose]( https://mongoosejs.com)
@@ -811,4 +783,8 @@
     - [API con nodejs, MongoDB]( https://medium.com/techwomenc/crea-una-api-con-nodejs-and-mongodb-f315c73e28fe)
     - [Heroku]( https://www.heroku.com/)
 
+=======
+    Utilizar postman para probar la API
+    
+>>>>>>> e06754cfb3c143c8e616cb248989ea7eb69d5d2b
 → [index](#index)
