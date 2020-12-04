@@ -23,8 +23,9 @@
 
 - [Proyecto Final](#Proyecto-Final)
 
-- [Resolucion Proyecto Final](#Resolucion-Proyecto-Final)
+- [Resolucion Proyecto Final](#Resultado-Proyecto-Final)
 
+- [Documentacion](#Documentacion/Tutoriales)
 
 ### **Introduccion**
 
@@ -783,7 +784,7 @@
     - [API con nodejs, MongoDB]( https://medium.com/techwomenc/crea-una-api-con-nodejs-and-mongodb-f315c73e28fe)
     - [Heroku]( https://www.heroku.com/)
 
-=======
+
     Utilizar postman para probar la API
     
 >>>>>>> e06754cfb3c143c8e616cb248989ea7eb69d5d2b
