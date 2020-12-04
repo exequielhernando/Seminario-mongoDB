@@ -25,7 +25,7 @@
 
 - [Resolucion Proyecto Final](#Resultado-Proyecto-Final)
 
-- [Documentacion](#Documentacion/Tutoriales)
+- [Documentacion](#Documentacion-Tutoriales)
 
 ### **Introduccion**
 
@@ -776,7 +776,7 @@
     - [Endpoints](https://documenter.getpostman.com/view/8287019/TVetaR2g)
 
 <<<<<<< HEAD
-### **Documentacion/Tutoriales**
+### **Documentacion-Tutoriales**
     
     - [mongoose]( https://mongoosejs.com)
     - [Node.js]( https://desarrolloweb.com/manuales/manual-nodejs.html)
